@@ -1,0 +1,228 @@
+#resumePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  >header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 48px;
+    >h3 {
+      color: rgb(0, 0, 0);
+      font-size: 50px;
+      border: 1px solid black;
+      padding: 16px 64px;
+      box-shadow: inset 0 2px 0 0 rgb(0, 0, 0);
+    }
+    >h6 {
+      font-size: 12px;
+      margin: 24px auto;
+      color: rgba(0, 0, 0, 0.8)
+    }
+    >img {
+      width: 160px;
+      height: 160px;
+      border-radius: 80px;
+      text-align: center;
+    }
+  }
+  >main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    .content-left {
+      border-right: 2px solid #ccc;
+      flex: 1;
+      padding: 0 64px;
+      display: flex;
+      flex-direction: column;
+      >header {
+        text-align: right;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        margin-top: 56px;
+        letter-spacing: 6px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      >.experience {
+        margin-bottom: 48px;
+        flex-grow: 1;
+        div {
+          text-align: right;
+        }
+        .experience-period {
+          color: rgb(133, 133, 133);
+          margin-bottom: 24px;
+        }
+        .experience-company {
+          font-weight: 700;
+          font-size: 18px;
+        }
+        .experience-position {
+          font-weight: 400;
+          margin-bottom: 8px;
+          color: rgb(133, 133, 133);
+        }
+        .experience-content {
+          color: rgb(133, 133, 153);
+        }
+      }
+      >.projects {
+        text-align: right;
+        margin-bottom: 24px;
+        >.projects-name {
+          font-weight: 700;
+          font-size: 18px;
+          margin-bottom: 8px;
+        }
+        >.projects-content {
+          color: rgb(133, 133, 153);
+        }
+      }
+      div.experience {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      div.projects {
+        &:last-child {
+          margin-bottom: 24px;
+        }
+      }
+    }
+    .content-right {
+      flex: 1;
+      padding: 0 64px;
+      >header {
+        text-align: left;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        margin-top: 56px;
+        letter-spacing: 6px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      .education {
+        margin-bottom: 24px;
+        .education-period {
+          color: rgb(133, 133, 133);
+          margin-bottom: 20px;
+        }
+        .education-school {
+          font-weight: 700;
+          font-size: 18px;
+        }
+      }
+      .skills {
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          div {
+            &:first-child {
+              width: 120px;
+              color: rgb(133, 133, 133);
+            };
+            &:last-child {
+              position: relative;
+              height: 10px;
+              background-color: rgba(150, 150, 150, 0.25);
+              flex-grow: 1;
+
+            }
+          }
+          .skills-html {
+            &:after {
+              content: '';
+              display: block;
+              height: 100%;
+              background-color: rgba(150, 150, 150, 0.8);
+              width: 88%;
+            }
+          }
+          .skills-css {
+            &:after {
+              content: '';
+              display: block;
+              height: 100%;
+              background-color: rgba(150, 150, 150, 0.8);
+              width: 78%;
+            }
+          }
+          .skills-javascript {
+            &:after {
+              content: '';
+              display: block;
+              height: 100%;
+              background-color: rgba(150, 150, 150, 0.8);
+              width: 80%;
+            }
+          }
+          .skills-vue {
+            &:after {
+              content: '';
+              display: block;
+              height: 100%;
+              background-color: rgba(150, 150, 150, 0.8);
+              width: 66%;
+            }
+          }
+          .skills-jquery {
+            &:after {
+              content: '';
+              display: block;
+              height: 100%;
+              background-color: rgba(150, 150, 150, 0.8);
+              width: 84%;
+            }
+          }
+        }
+      }
+      .awards {
+        display: flex;
+        margin-bottom: 24px;
+        >.awards-left {
+          padding: 8px 16px 8px 0;
+          border-right: 1px solid #ccc;
+        }
+        >.awards-right {
+          flex-grow: 1;
+          padding: 8px 0 8px 16px;
+          >.awards-name {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+          >.awards-content {
+            color: rgb(133, 133, 153);
+          }
+        }
+      }
+      .contacts {
+        >div {
+          margin-bottom: 8px;
+          span {
+            &:last-child {
+              color: rgb(133, 133, 153);
+            }
+          }
+        }
+      }
+    }
+  }
+  .divide-line {
+    width: 90%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 32px 0;
+  }
+}

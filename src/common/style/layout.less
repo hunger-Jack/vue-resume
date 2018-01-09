@@ -1,0 +1,74 @@
+#app {
+  .page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    >main {
+      flex-grow: 1;
+      min-width: 1024px;
+      max-width: 1440px;
+      margin: 16px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      align-self: center;
+      width: 100%;
+      padding: 0 16px;
+      >#resumeEditor {
+        border-radius: 4px;
+        width: 35%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+        
+      }
+      >#resumePreview {
+        border-radius: 4px;
+        width: 61.66667%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+        flex-grow: 1;
+        margin-left: 16px;
+      }
+    }
+  }
+  .goBack {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.active {
+  display: none !important;
+}
+.slideUpDown-enter-active {
+  animation: header-in 1s;
+}
+.slideUpDown-leave-active {
+  animation: header-in 1s reverse;
+}
+.slideLeftRight-enter-active {
+  animation: editor-in 1s;
+}
+.slideLeftRight-leave-active {
+  animation: editor-in 1s reverse;
+}
+@keyframes header-in {
+  0% {
+    transform: translateY(-64px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes editor-in {
+  0% {
+    transform: translateX(-374.188px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
