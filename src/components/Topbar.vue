@@ -1,6 +1,6 @@
 <template>
   <div id="topbar">
-    <a href="javascript:voild(0)" class="theme">Resume</a>
+    <a href="javascript:voild(0)" class="theme" @click="toHome">Resume</a>
     <div class="space"></div>
     <div class="userInfo" v-if="user.id">
       <span>你好，{{user.username}}</span>
@@ -38,7 +38,11 @@
       },
       signUp() {
         router.push('/signUp')
+      },
+      toHome() {
+        router.push('/')
       }
+
     },
     created() {
       this.$store.commit('SET_USER', getAvUser())
