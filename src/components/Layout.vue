@@ -14,6 +14,7 @@
       </main>
     </div>
     <el-button type="info" class="goBack" @click="onBack" v-if="isVisible == true">返回</el-button>
+    <el-button class="snip" v-if="isVisible == true" @click="captureScreenshots">Screenshots</el-button>
   </div>
 </template>
 
@@ -25,6 +26,8 @@
   import ResumePreview from "@/components/ResumePreview";
   import Login from '@/components/Login'
   import icons from '@/assets/icons'
+  import html2canvas from '../assets/html2canvas'
+  import FileSaver from 'file-saver'
   export default {
     name: "Layout",
     components: {
@@ -41,19 +44,29 @@
     methods: {
       onBack() {
         this.$store.state.isVisible = false
-      }
+      },
+      captureScreenshots() {
+        let resume = document.querySelector('#resumePreview')
+        html2canvas(resume).then(function (canvas) {
+          canvas.toBlob(function (blob) {
+            FileSaver.saveAs(blob, 'Resume.png')
+          })
+        })
+      },
     },
+
     created() {
       document.body.insertAdjacentHTML('afterbegin', icons)
       let state = localStorage.getItem('state')
       if (state) {
         state = JSON.parse(state)
       }
-      this.$store.commit('initState', state)
+      this.$store.commit('INIT_STATE', state)
     }
   };
 
 </script>
 <style lang="less" scoped>
   @import url('../common/style/layout.less');
+
 </style>

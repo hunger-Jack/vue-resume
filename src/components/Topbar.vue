@@ -31,8 +31,7 @@
       },
       logOut() {
         AV.User.logOut();
-        console.log(getAvUser())
-        this.$store.commit('setUser', getAvUser())
+        this.$store.commit('SET_USER', getAvUser())
       },
       login() {
         router.push('/login')
@@ -42,7 +41,7 @@
       }
     },
     created() {
-      this.$store.commit('setUser', getAvUser())
+      this.$store.commit('SET_USER', getAvUser())
     }
   }
 

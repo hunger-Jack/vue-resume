@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import objectPath from 'object-path'
+import mutations from './mutations'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -107,27 +108,5 @@ export default new Vuex.Store({
       ],
     },
   },
-  mutations: {
-    setUser(state, payload) {
-      Object.assign(state.user, payload)
-    },
-    initState(state, payload) {
-      Object.assign(state, payload)
-    },
-    switchTab(state, payload) {
-      state.selected = payload
-      localStorage.setItem('state', JSON.stringify(state))
-    },
-    updateResume(state, {
-      path,
-      value
-    }) {
-      objectPath.set(state.resume, path, value)
-      localStorage.setItem('state', JSON.stringify(state))
-    },
-    removeUser(state) {
-      state.user.id = null
-      console.log(state.user.id)
-    }
-  }
+  mutations,
 })

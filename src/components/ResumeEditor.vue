@@ -36,13 +36,13 @@
           return this.$store.state.selected
         },
         set(a) {
-          return this.$store.commit('switchTab', a)
+          return this.$store.commit('SWITCH_TAB', a)
         }
       }
     },
     methods: {
       changeResumeField(path,value) {
-        this.$store.commit('updateResume', {
+        this.$store.commit('UPDATE_RESUME', {
           path,
           value
         })

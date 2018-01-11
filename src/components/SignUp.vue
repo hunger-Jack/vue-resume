@@ -48,7 +48,7 @@
         user.setUsername(this.formData.username)
         user.setPassword(this.formData.password)
         user.signUp().then((loginedUser) => {
-          this.$store.commit('setUser', getAvUser()) //如果注册成功，更新vuex用户数据。
+          this.$store.commit('SET_USER', getAvUser()) //如果注册成功，更新vuex用户数据。
           router.push('Layout')
           console.log('注册成功了')
         }, (error) => {

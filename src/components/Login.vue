@@ -48,7 +48,7 @@
     methods: {
       login() { //用户登录
         AV.User.logIn(this.formData.username, this.formData.password).then(() => {
-          this.$store.commit('setUser', getAvUser()) //如果登录成功，更新vuex用户数据
+          this.$store.commit('SET_USER', getAvUser()) //如果登录成功，更新vuex用户数据
           router.push('Layout') //如果登录成功，则跳转至’/layout‘路由
           console.log('登录成功')
         }, (error) => {
