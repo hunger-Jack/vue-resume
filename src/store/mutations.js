@@ -1,10 +1,13 @@
-
+import saveOrUpdateResumeData from '../lib/saveOrUpdateResumeData'
 import objectPath from 'object-path'
+import getAvUser from '../lib/getAvUser'
+
 const SET_USER = 'SET_USER'
 const INIT_STATE = 'INIT_STATE'
 const SWITCH_TAB = 'SWITCH_TAB'
 const UPDATE_RESUME = 'UPDATE_RESUME'
 const REMOVE_USER = 'REMOVE_USER'
+
 
 export default {
   [SET_USER](state, payload) {
@@ -15,14 +18,14 @@ export default {
   },
   [SWITCH_TAB](state, payload) {
     state.selected = payload
-    localStorage.setItem('state', JSON.stringify(state))
+    saveOrUpdateResumeData()
   },
   [UPDATE_RESUME](state, {
     path,
     value
   }) {
     objectPath.set(state.resume, path, value)
-    localStorage.setItem('state', JSON.stringify(state))
+    saveOrUpdateResumeData()
   },
   [REMOVE_USER](state) {
     state.user.id = null

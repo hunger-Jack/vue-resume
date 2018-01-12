@@ -31,7 +31,7 @@ export default new Router({
       }
     },
     {
-      path: '/Layout',
+      path: '/layout',
       name: 'Layout',
       components: {
         Layout: Layout

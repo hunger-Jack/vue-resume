@@ -57,11 +57,6 @@
 
     created() {
       document.body.insertAdjacentHTML('afterbegin', icons)
-      let state = localStorage.getItem('state')
-      if (state) {
-        state = JSON.parse(state)
-      }
-      this.$store.commit('INIT_STATE', state)
     }
   };
 

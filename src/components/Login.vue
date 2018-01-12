@@ -35,6 +35,7 @@
   import AV from '../lib/leancloud'
   import getAvUser from '../lib/getAvUser'
   import getErrorMessage from '../lib/getErrorMessage'
+
   export default {
     name: 'Login',
     data() {

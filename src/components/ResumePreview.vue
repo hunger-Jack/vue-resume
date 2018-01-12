@@ -73,16 +73,20 @@
 </template>
 <script>
   import store from '../store/index'
+  import saveOrUpdateResumeData from '../lib/saveOrUpdateResumeData'
+  import getAvUser from '../lib/getAvUser'
+
   export default {
     name: 'ResumePreview',
     computed: {
       resume() {
         return this.$store.state.resume
-      }
-    }
+      },
+    },
   }
 
 </script>
 <style lang="less" scoped>
   @import url('../common/style/resumePreview.less');
+
 </style>
