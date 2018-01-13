@@ -33,7 +33,7 @@
           <li v-for="(item,index) in resume.skills" :key="index">
             <div class="skills-name">{{item.Name || 'Name of Language'}}</div>
             <div class="skills-proficiency">
-              <div v-bind:class="item.Name" :style="{width:item.Proficiency}"></div>
+              <div :class="item.Name" :style="{width:item.Proficiency}"></div>
             </div>
           </li>
         </ul>
