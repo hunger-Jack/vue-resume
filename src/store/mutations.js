@@ -7,7 +7,7 @@ const INIT_STATE = 'INIT_STATE'
 const SWITCH_TAB = 'SWITCH_TAB'
 const UPDATE_RESUME = 'UPDATE_RESUME'
 const REMOVE_USER = 'REMOVE_USER'
-
+const INIT_RESUME = 'INIT_RESUME'
 
 export default {
   [SET_USER](state, payload) {
@@ -29,5 +29,8 @@ export default {
   },
   [REMOVE_USER](state) {
     state.user.id = null
+  },
+  [INIT_RESUME](state) {
+    Object.assign(state.resume, null)
   }
 }

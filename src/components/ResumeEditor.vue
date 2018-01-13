@@ -15,7 +15,13 @@
           <div class="subitem" v-for="(subitem,index) in resume[item.field]" :key="index">
             <div class="resumeField" v-for="(value,key) in subitem" :key="key">
               <label>{{key}}</label>
-              <input type="text" :value="value" @input="changeResumeField(`${item.field}.${index}.${key}`,$event.target.value)" placeholder="Please input your information">
+              <input 
+              @click="alertMessage"
+              type="text" 
+              :value="value" 
+              @input="changeResumeField(`${item.field}.${index}.${key}`,$event.target.value)" 
+              placeholder="Please input your information"
+              :readonly = 'readonly'>
             </div>
           </div>
         </li>
@@ -42,14 +48,18 @@
         set(a) {
           return this.$store.commit('SWITCH_TAB', a)
         }
+      },
+      readonly() {
+        return !getAvUser().id
       }
     },
     methods: {
-      changeResumeField(path, value) {
-        if ((getAvUser().id) == undefined) {
+      alertMessage() {
+        if((getAvUser().id) == undefined) {
           alert('请先登录账号，在使用功能哦~~')
-          return
         }
+      },
+      changeResumeField(path, value) {
         this.$store.commit('UPDATE_RESUME', {
           path,
           value
@@ -62,7 +72,6 @@
           query.find()
             .then((resume) => {
               let avResume = resume[0]
-              console.log(avResume)
               let id = avResume.id
               this.$store.state.resume = JSON.parse(avResume.attributes.content)
               this.$store.state.resume.id = id
@@ -74,6 +83,7 @@
     },
     created() {
       this.fetchResume()
+      getAvUser()
     }
   }
 
