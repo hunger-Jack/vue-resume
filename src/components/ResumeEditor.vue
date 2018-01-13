@@ -15,7 +15,7 @@
           <div class="subitem" v-for="(subitem,index) in resume[item.field]" :key="index">
             <div class="resumeField" v-for="(value,key) in subitem" :key="key">
               <label>{{key}}</label>
-              <input type="text" :value="value" @input="changeResumeField(`${item.field}.${index}.${key}`,$event.target.value)" placeholder="23432432">
+              <input type="text" :value="value" @input="changeResumeField(`${item.field}.${index}.${key}`,$event.target.value)" placeholder="Please input your information">
             </div>
           </div>
         </li>

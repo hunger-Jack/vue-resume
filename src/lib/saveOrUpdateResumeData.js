@@ -2,11 +2,11 @@ import store from '../store/index'
 import AV from 'leancloud-storage'
 
 function saveResumeData() {
-    console.log(1)
     let dataString = JSON.stringify(store.state.resume)
     var AVResume = AV.Object.extend('Resume')
     var avResume = new AVResume()
     var acl = new AV.ACL()
+    console.log(AV.User.current())
     acl.setWriteAccess(AV.User.current(),true)
     acl.setReadAccess(AV.User.current(),true)
     avResume.set('content', dataString)
@@ -19,7 +19,6 @@ function saveResumeData() {
     })
   }
   function updateResumeData() {
-      console.log(2)
     let dataString = JSON.stringify(store.state.resume)
     // 第一个参数是 className，第二个参数是 objectId
     var avResume = AV.Object.createWithoutData('Resume', store.state.resume.id);
@@ -31,7 +30,7 @@ function saveResumeData() {
     });
   }
   function saveOrUpdateResumeData() {
-      console.log(3)
+    console.log(1)
     if (store.state.resume.id) {
       updateResumeData()
     } else {

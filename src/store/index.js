@@ -36,74 +36,93 @@ export default new Vuex.Store({
         {
           field: 'contacts',
           icon: 'phone'
-        },
+        },{
+          field: 'skills',
+          icon: 'add'
+        }
       ],
+      skills: [{
+        Name: '',
+        Proficiency: '',
+      },{
+        Name: '',
+        Proficiency: '',
+      },{
+        Name: '',
+        Proficiency: '',
+      },{
+        Name: '',
+        Proficiency: '',
+      },{
+        Name: '',
+        Proficiency: '',
+      }],
       profile: [{
-        Name: 'JACK HUNGER',
-        Job: 'FRONT-END DEVELOPMENT  ENGINEER',
-        City: 'Shanghai China',
-        Projects: 'Web前端',
+        Name: '',
+        Job: '',
+        City: '',
+        Projects: '',
       }],
       experience: [{
-          Company: 'alibaba in hengzhou zhejiang',
-          Content: 'web font-end development fsdf sdfds fds fds fds fds fds fds fds fds fds fdas fds fds fds fds fds fds',
-          Period: '2012~2014',
-          Position: 'font-end development'
+          Company: '',
+          Content: '',
+          Period: '',
+          Position: ''
         },
         {
-          Company: 'alibaba in hengzhou zhejiang',
-          Content: 'web font-end development fsdf sdfds fds fds fds fds fds fds fds fds fds fdas fds fds fds fds fds fds',
-          Period: '2014~2016',
-          Position: 'font-end development'
+          Company: '',
+          Content: '',
+          Period: '',
+          Position: ''
         }, {
-          Company: 'alibaba in hengzhou zhejiang',
-          Content: 'web font-end development fsdf sdfds fds fds fds fds fds fds fds fds fds fdas fds fds fds fds fds fds',
-          Period: '2016~2017',
-          Position: 'font-end development'
+          Company: '',
+          Content: '',
+          Period: '',
+          Position: ''
         }, {
-          Company: 'alibaba in hengzhou zhejiang',
-          Content: 'web font-end development fsdf sdfds fds fds fds fds fds fds fds fds fds fdas fds fds fds fds fds fds',
-          Period: '2017~now',
-          Position: 'font-end development'
+          Company: '',
+          Content: '',
+          Period: '',
+          Position: ''
         },
       ],
       education: [{
-        Period: '2009~2012',
-        School: 'DJIDF JLJFDFF'
+        Period: '',
+        School: ''
         },
         {
-          Period: '2006~2009',
-          School: 'SDDSI SDSD'
+          Period: '',
+          School: ''
         },
       ],
       projects: [{
-          Name: 'VUE单页应用',
-          Content: '使用vue写的一个简历的单页应用，可以兼容手机端'
+          Name: '',
+          Content: ''
         },
         {
-          Name: '原生JS瀑布流懒加载',
-          Content: '使用面向对象写的一个demo，主要突出面向对象的思想'
+          Name: '',
+          Content: ''
         },
       ],
       awards: [{
-          Name: 'SDFJKLD',
-          Content: 'SDFDJSF jkl jf fdsf jfdsl fjkd sf',
-          Date: '2013'
+          Name: '',
+          Content: '',
+          Date: '',
         },
         {
-          Name: 'DFJKSDFJ',
-          Content: 'fds fdsa fdafdsafj afjasf jflsa fjkdsa fj',
-          Date: '2015'
+          Name: '',
+          Content: '',
+          Date: '',
         },
       ],
       contacts: [{
-          Addr: 'FJDKSF fjsdkfSDFKLf fjsdf jfdsjfds',
-          TEl: 12345678909,
-          QQ: '2432432',
-          Email: '42141432@qq.com',
-          Web: 'www.jirengu.com',
-          Blog: 'www.jianshu.com/jack',
-          Github: 'www.github.com/jack'
+          Addr: '',
+          TEl: '',
+          QQ: '',
+          Email: '',
+          Web: '',
+          Blog: '',
+          Github: ''
         },
       ],
     },

@@ -137,62 +137,20 @@
           display: flex;
           align-items: center;
           margin-bottom: 10px;
-          div {
-            &:first-child {
-              width: 120px;
-              color: rgb(133, 133, 133);
-            };
-            &:last-child {
-              position: relative;
-              height: 10px;
-              background-color: rgba(150, 150, 150, 0.25);
-              flex-grow: 1;
-
-            }
+          .skills-name {
+            width: 120px;
+            color: rgb(133, 133, 133);
           }
-          .skills-html {
-            &:after {
-              content: '';
-              display: block;
+          .skills-proficiency {
+            position: relative;
+            height: 10px;
+            background-color: rgba(150, 150, 150, 0.25);
+            flex-grow: 1;
+            div {
+              background-color: 'red';
+              position: 'absolute';
               height: 100%;
               background-color: rgba(150, 150, 150, 0.8);
-              width: 88%;
-            }
-          }
-          .skills-css {
-            &:after {
-              content: '';
-              display: block;
-              height: 100%;
-              background-color: rgba(150, 150, 150, 0.8);
-              width: 78%;
-            }
-          }
-          .skills-javascript {
-            &:after {
-              content: '';
-              display: block;
-              height: 100%;
-              background-color: rgba(150, 150, 150, 0.8);
-              width: 80%;
-            }
-          }
-          .skills-vue {
-            &:after {
-              content: '';
-              display: block;
-              height: 100%;
-              background-color: rgba(150, 150, 150, 0.8);
-              width: 66%;
-            }
-          }
-          .skills-jquery {
-            &:after {
-              content: '';
-              display: block;
-              height: 100%;
-              background-color: rgba(150, 150, 150, 0.8);
-              width: 84%;
             }
           }
         }
