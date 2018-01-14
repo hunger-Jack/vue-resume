@@ -68,8 +68,10 @@
       resume() {
         return this.$store.state.resume
       },
-
     },
+    created() {
+      console.log(store.state.resume)
+    }
   }
 
 </script>

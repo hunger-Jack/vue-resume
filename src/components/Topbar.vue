@@ -10,7 +10,7 @@
       <a href="javascript:void(0)" @click="setRouter('/login')">登录</a>
       <a href="javascript:void(0)" @click="setRouter('/signUp')">注册</a>
     </div>
-    <button class="btn save">保存</button>
+    <button class="btn save" @click="getData">保存</button>
     <button class="btn pre" @click="onPreviw">预览</button>
   </div>
 </template>
@@ -18,6 +18,7 @@
   import getAvUser from '../lib/getAvUser'
   import AV from '../lib/leancloud'
   import router from '../router/index'
+  import axios from 'axios'
   export default {
     name: 'Topbar',
     computed: {
@@ -36,7 +37,7 @@
       },
        setRouter(path) {
         router.push(path)
-      }
+      },
     },
     created() {
       this.$store.commit('SET_USER', getAvUser())

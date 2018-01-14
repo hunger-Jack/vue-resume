@@ -38,7 +38,7 @@ export default new Vuex.Store({
           icon: 'phone'
         },{
           field: 'skills',
-          icon: 'add'
+          icon: 'skill'
         }
       ],
       skills: [{
