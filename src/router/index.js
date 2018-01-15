@@ -8,8 +8,8 @@ import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
 import Preview from '@/components/Preview'
 export default new Router({
-  mode: 'history',
-  base: __dirname,
+  // mode: 'history',
+  // base: __dirname,
   routes: [{
       path: '/',
       name: 'Home',
