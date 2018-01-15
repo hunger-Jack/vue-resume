@@ -14,14 +14,12 @@
       <button class="btn save" @click="getData">保存</button>
       <button class="btn pre" @click="onPreviw">预览</button>
     </div>
-
   </div>
 </template>
 <script>
   import getAvUser from '../lib/getAvUser'
   import AV from '../lib/leancloud'
   import router from '../router/index'
-  import axios from 'axios'
   export default {
     name: 'Topbar',
     computed: {

@@ -55,24 +55,47 @@
       </div>
     </main>
     <div class="divide-line"></div>
+    <footer class="hobbies">
+      <div class="hobbies-header">HOBBIES :</div>
+      <div class="hobbies-content" >
+        <label v-for="(item,index) in resume.hobbies" :key="index">
+          <input type="checkbox" checked='checked'> {{item.Hobby || 'Hobby'}}
+        </label>
+      </div>
+    </footer>
+    <a href="javascript:viod(0)" class="resume-home" @click="setPath('/')">Resume</a>
   </div>
 </template>
 <script>
-  import store from '../store/index'
-  import saveOrUpdateResumeData from '../lib/saveOrUpdateResumeData'
-  import getAvUser from '../lib/getAvUser'
-
+import router from '../router/index'
   export default {
-    name: 'ResumePreview',
+    name: 'Preview',
     computed: {
       resume() {
         return this.$store.state.resume
       },
+    },
+    methods: {
+      setPath(path) {
+        router.push(path)
+      }
     }
   }
 
 </script>
 <style lang="less" scoped>
   @import url('../common/style/resumePreview.less');
-
+  #resumePreview {
+    width: 81%;
+    margin: 64px auto;
+    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.25);
+    .resume-home {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      text-shadow: 0 3px 2px rgba(0, 0, 0, 0.25);
+      font-family: 'ABeeZee', sans-serif;
+    }
+  }
 </style>

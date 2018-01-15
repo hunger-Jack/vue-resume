@@ -36,24 +36,28 @@ export default new Vuex.Store({
         {
           field: 'contacts',
           icon: 'phone'
-        },{
+        }, {
           field: 'skills',
           icon: 'skill'
+        },
+        {
+          field: 'hobbies',
+          icon: 'hobby'
         }
       ],
       skills: [{
         Name: '',
         Proficiency: '',
-      },{
+      }, {
         Name: '',
         Proficiency: '',
-      },{
+      }, {
         Name: '',
         Proficiency: '',
-      },{
+      }, {
         Name: '',
         Proficiency: '',
-      },{
+      }, {
         Name: '',
         Proficiency: '',
       }],
@@ -87,8 +91,8 @@ export default new Vuex.Store({
         },
       ],
       education: [{
-        Period: '',
-        School: ''
+          Period: '',
+          School: ''
         },
         {
           Period: '',
@@ -116,15 +120,23 @@ export default new Vuex.Store({
         },
       ],
       contacts: [{
-          Addr: '',
-          TEl: '',
-          QQ: '',
-          Email: '',
-          Web: '',
-          Blog: '',
-          Github: ''
-        },
-      ],
+        Addr: '',
+        TEl: '',
+        QQ: '',
+        Email: '',
+        Web: '',
+        Blog: '',
+        Github: ''
+      }],
+      hobbies: [{
+        Hobby: ''
+      }, {
+        Hobby: ''
+      }, {
+        Hobby: ''
+      }, {
+        Hobby: ''
+      }]
     },
   },
   mutations,

@@ -55,13 +55,17 @@
       </div>
     </main>
     <div class="divide-line"></div>
+    <footer class="hobbies">
+      <div class="hobbies-header">HOBBIES :</div>
+      <div class="hobbies-content" >
+        <label v-for="(item,index) in resume.hobbies" :key="index">
+          <input type="checkbox" checked='checked'> {{item.Hobby || 'Hobby'}}
+        </label>
+      </div>
+    </footer>
   </div>
 </template>
 <script>
-  import store from '../store/index'
-  import saveOrUpdateResumeData from '../lib/saveOrUpdateResumeData'
-  import getAvUser from '../lib/getAvUser'
-
   export default {
     name: 'ResumePreview',
     computed: {
@@ -74,5 +78,4 @@
 </script>
 <style lang="less" scoped>
   @import url('../common/style/resumePreview.less');
-
 </style>
