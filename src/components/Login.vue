@@ -1,7 +1,7 @@
 <template>
   <div id="login">
     <div class="login-logo">
-      <img src="../common/image/resume-logo.png" alt="网站logo">
+      <img src="../common/image/resume-logo.png" alt="网站logo" @click="setPath('/')">
     </div>
     <header class="login-header">Resume 登录</header>
     <form @submit.prevent="login" class="login-form">
@@ -13,7 +13,7 @@
         <input type="submit" value="登录">
       </div>
     </form>
-    <div class="signUp" @click="toSignUp">注册</div>
+    <div class="signUp" @click="setPath('/signUp')">注册</div>
     <div class="forgetInfo">
       <div>忘记密码了吗？</div>
       <button>facebook</button>
@@ -50,14 +50,14 @@
       login() { //用户登录
         AV.User.logIn(this.formData.username, this.formData.password).then(() => {
           this.$store.commit('SET_USER', getAvUser()) //如果登录成功，更新vuex用户数据
-          router.push('Layout') //如果登录成功，则跳转至’/layout‘路由
+          router.push('/layout') //如果登录成功，则跳转至’/layout‘路由
           console.log('登录成功')
         }, (error) => {
           alert(getErrorMessage(JSON.parse(JSON.stringify(error)).code))
         })
       },
-      toSignUp() {//跳转到注册页面
-        router.push('/signUp')
+      setPath(path) {
+        router.push(path)
       }
     }
   }

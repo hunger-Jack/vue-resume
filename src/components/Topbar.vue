@@ -10,8 +10,11 @@
       <a href="javascript:void(0)" @click="setRouter('/login')">登录</a>
       <a href="javascript:void(0)" @click="setRouter('/signUp')">注册</a>
     </div>
-    <button class="btn save" @click="getData">保存</button>
-    <button class="btn pre" @click="onPreviw">预览</button>
+    <div class="saveOrPreview" v-if="user.id">
+      <button class="btn save" @click="getData">保存</button>
+      <button class="btn pre" @click="onPreviw">预览</button>
+    </div>
+
   </div>
 </template>
 <script>
@@ -35,7 +38,7 @@
         this.$store.commit('SET_USER', getAvUser())
         window.location.reload()
       },
-       setRouter(path) {
+      setRouter(path) {
         router.push(path)
       },
     },
@@ -47,4 +50,5 @@
 </script>
 <style scoped lang="less">
   @import url('../common/style/topbar.less');
+
 </style>

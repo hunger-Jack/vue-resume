@@ -1,7 +1,7 @@
 <template>
   <div id="signUp">
     <div class="signUp-logo">
-      <img src="../common/image/resume-logo.png" alt="网站logo">
+      <img src="../common/image/resume-logo.png" alt="网站logo" @click="setPath('/')">
     </div>
     <header class="signUp-header">马上制作Resume</header>
     <form @submit.prevent="signUp" class="signUp-form">
@@ -14,7 +14,7 @@
       </div>
     </form>
     <div class="login">已有账号了?
-      <a href="javascript:void(0)" @click.prevent="toLogin">登录</a>
+      <a href="javascript:void(0)" @click.prevent="setPath('/login')">登录</a>
     </div>
     <footer class="footer">
       <p>使用RESUME，即表示您同意我们的服务条款</p>
@@ -55,8 +55,8 @@
           alert(getErrorMessage(error))
         })
       },
-      toLogin() {
-        router.push('/login')
+      setPath(path) {
+        router.push(path)
       }
     },
   }
