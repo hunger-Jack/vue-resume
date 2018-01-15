@@ -41,6 +41,9 @@
       setRouter(path) {
         router.push(path)
       },
+      getData() {
+        router.push({name: 'Preview',query: {a:1}})
+      }
     },
     created() {
       this.$store.commit('SET_USER', getAvUser())

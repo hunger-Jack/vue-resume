@@ -6,6 +6,7 @@ import Layout from '@/components/Layout'
 import Home from '@/components/Home'
 import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
+import Preview from '@/components/Preview'
 export default new Router({
   mode: 'history',
   base: __dirname,
@@ -35,6 +36,13 @@ export default new Router({
       name: 'Layout',
       components: {
         Layout: Layout
+      }
+    },
+    {
+      path: '/preview',
+      name: 'Preview',
+      components: {
+        Preview: Preview
       }
     },
   ]

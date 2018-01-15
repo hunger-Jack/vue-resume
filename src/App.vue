@@ -4,6 +4,7 @@
     <transition name="fade"><router-view name="Login"></router-view></transition>
     <transition name="fade"><router-view name="SignUp"></router-view></transition>
     <transition name="fade"><router-view name="Layout"></router-view></transition>
+    <transition name="fade"><router-view name="Preview"></router-view></transition>
   </div>
 </template>
 
