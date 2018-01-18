@@ -1,0 +1,105 @@
+body,
+html {
+  width: 100%;
+}
+
+#signUp {
+  width: 30%;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  .signUp-logo {
+    width: 16%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .signUp-header {
+    font-size: 2em;
+    margin: 24px auto 40px auto;
+  }
+  .signUp-form {
+    width: 100%;
+    .signUp-info {
+      padding: 0 32px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      input {
+        height: 56px;
+        margin-top: 15px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        outline: none;
+        border-style: none;
+        background-color: #d6eafa;
+      }
+    }
+    .signUp-btn {
+      text-align: center;
+      input {
+        font-size: 1.2em;
+        width: 40%;
+        padding: 16px 0;
+        margin: 40px auto 30px auto;
+        background-color: #3e94e4;
+        color: white;
+        border-radius: 4px;
+        transition: color 0.2s linear;
+        &:hover {
+          background-color: #2e8fe8;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+  .login {
+    font-size: 1.2em;
+    text-align: center;
+    color: #3e94e4;
+    cursor: default;
+    a {
+      text-decoration-line: underline;
+      text-decoration-color: #3e94e4;
+      transition: color 0.2s linear;
+      &:hover {
+        color: #97c6f1;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    p {
+      text-align: center;
+      &:first-child {
+        color: rgba(82, 80, 80, 0.733);
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+      ;
+      &:last-child {
+        margin-top: 10px;
+        a {
+          padding: 0 8px;
+          color: #3e94e4;
+          transition: color 0.2s linear;
+          &:hover {
+            color: #97c6f1;
+          }
+          &:first-child {
+            border-right: 1px solid #ccc;
+          }
+          &:last-child {
+            margin-left: -7px;
+          }
+        }
+      }
+    }
+  }
+}
