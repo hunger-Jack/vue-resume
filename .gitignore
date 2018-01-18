@@ -1,4 +1,2 @@
 node_modules
-src/lib/leancloud.js
-leancloud.js
-src/lib
+src/lib/*.js
