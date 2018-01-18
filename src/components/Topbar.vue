@@ -45,8 +45,8 @@
         axios({
           "method": "get",
           "url": "https://alrlvlql.api.lncld.net/1.1/classes/Resume/5a60def144d9040067c52580",
-          "X-LC-Id": "ALRLVlqlCdTrEnYOTyknP8h9-gzGzoHsz",
-          "X-LC-Sign": "ddaa4ae79b03c285d040b86784acdbdc"+new Date()+",master",
+          "X-LC-Key": "ALRLVlqlCdTrEnYOTyknP8h9-gzGzoHsz",
+          "X-LC-Sign": "e4VyeLQBhbrV6bJLpsuGhpiJ",
         }).then(function(response){
           console.log(response)
         })
