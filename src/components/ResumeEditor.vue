@@ -20,7 +20,7 @@
               type="text" 
               :value="value" 
               @input="changeResumeField(`${item.field}.${index}.${key}`,$event.target.value)" 
-              placeholder="Please input your information"
+              :placeholder="'input your'+'\t'+key"
               :readonly = 'readonly'>
             </div>
           </div>

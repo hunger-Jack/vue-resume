@@ -20,6 +20,8 @@
   import getAvUser from '../lib/getAvUser'
   import AV from '../lib/leancloud'
   import router from '../router/index'
+  import axios from 'axios'
+  import md5 from 'md5'
   export default {
     name: 'Topbar',
     computed: {
@@ -40,7 +42,14 @@
         router.push(path)
       },
       getData() {
-        router.push({name: 'Preview',query: {a:1}})
+        axios({
+          "method": "get",
+          "url": "https://leancloud.cn:443/1.1/classes/Resume/5a60def144d9040067c52580",
+          "X-LC-Id": "ALRLVlqlCdTrEnYOTyknP8h9-gzGzoHsz",
+          "X-LC-Sign": "ddaa4ae79b03c285d040b86784acdbdc"+new Date(),
+        }).then(function(response){
+          console.log(response)
+        })
       }
     },
     created() {
