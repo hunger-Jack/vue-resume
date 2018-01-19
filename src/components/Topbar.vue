@@ -20,8 +20,6 @@
   import getAvUser from '../lib/getAvUser'
   import AV from '../lib/leancloud'
   import router from '../router/index'
-  import getData from '../assets/axios'
-  import md5 from 'md5'
   export default {
     name: 'Topbar',
     computed: {
@@ -42,7 +40,7 @@
         router.push(path)
       },
       getData() {
-        getData()
+        router.push({path:'/preview',query:{a:1}})
       }
     },
     created() {
