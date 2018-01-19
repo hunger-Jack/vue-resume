@@ -18,14 +18,14 @@ export default {
   },
   [SWITCH_TAB](state, payload) {
     state.selected = payload
-    saveOrUpdateResumeData()
+    // saveOrUpdateResumeData()
   },
   [UPDATE_RESUME](state, {
     path,
     value
   }) {
     objectPath.set(state.resume, path, value)
-    saveOrUpdateResumeData()
+    // saveOrUpdateResumeData()
   },
   [REMOVE_USER](state) {
     state.user.id = null

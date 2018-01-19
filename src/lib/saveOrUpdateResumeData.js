@@ -6,7 +6,6 @@ function saveResumeData() {
     var AVResume = AV.Object.extend('Resume')
     var avResume = new AVResume()
     var acl = new AV.ACL()
-    console.log(AV.User.current())
     acl.setWriteAccess(AV.User.current(),true)
     acl.setReadAccess(AV.User.current(),true)
     avResume.set('content', dataString)

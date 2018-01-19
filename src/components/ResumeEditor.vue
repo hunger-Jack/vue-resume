@@ -65,6 +65,7 @@
           value
         })
       },
+      /*
       fetchResume() {//如果用户刚进来检测到已经登录账号，拉取leancloud数据和对应id，存储到state.resume
         var vm = this
         if (getAvUser()) {
@@ -80,9 +81,11 @@
             })
         }
       },
+      */
     },
+    
     created() {
-      this.fetchResume()
+      // this.fetchResume()
       getAvUser()
     }
   }
